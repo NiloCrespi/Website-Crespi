@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website |Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./sass/style.css">
+    <meta name="description" content="Noticias y reseñas sobre música en formatos analogicos.">
+    <meta name="keywords" content="Noticias, Reseñas, Musica, Vinilo, LP, Indie, Disquerias, Agenda, Reediciones">
+</head>
+<body>
+
+    <header>
+
+        <div class="header__desktop">
+            <div class="header__desktop--redes">
+                <a href="https://twitter.com/home"><div class="bi bi-twitter header__desktop--iconoRedes"></div></a>    
+                <a href="https://www.facebook.com/"><div class="bi bi-facebook header__desktop--iconoRedes"></div></a>    
+                <a href="https://www.instagram.com/"><div class="bi bi-instagram header__desktop--iconoRedes"></div></a>          
+            </div>    
+
+            <div class="header__desktop--contCentral">
+                <div class="header__desktop--logo">
+                    <h1><a href="./index.html">website</a></h1>
+                </div>
+                <nav class="header__desktop--menu">    
+                        <ul>
+                            <li><a href="./pages/noticias.html">NOTICIAS</a></li> 
+                            <br>    
+                            <li><a href="./pages/resenas.html">RESEÑAS</a></li>   
+                            <br>    
+                            <li><a href="./pages/agenda.html">AGENDA</a></li>
+                            <br>
+                            <li><a href="./pages/contacto.html">CONTACTO</a></li>    
+                         </ul>
+                </nav> 
+                            
+            </div>    
+            <div class="header__desktop--player">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1dZ7OmDaHPrSwsZGyySFqy?utm_source=generator&theme=0" width="320" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            </div>        
+    
+        </div>
+
+        <div class="header__logo">
+            <a href="./index.html">
+                <h1>Website</h1>
+            </a>
+        </div>
+
+        <nav class="header__menu--mobile">
+            <ul> 
+                <li><a href="./pages/noticias.html"><i class="bi bi-newspaper"></i></a></li> 
+                <li><a href="./pages/resenas.html"><i class="bi bi-star-fill"></i></a></li>
+                <li><a href="./pages/agenda.html"><i class="bi bi-calendar-event"></i></a></li>
+                <li><a href="./pages/contacto.html"><i class="bi bi-envelope-paper"></i></a></li>
+            </ul>
+        </nav>       
+    </header>
+    
+    <main>
+
+        <section class="index__ultNoticias">
+            <div class="index__ultNoticias--titulo">
+                <h2>ULTIMAS NOTICIAS</h2>
+            </div>
+
+            <div id="index__ultNoticias--carousel" class="row">
+                <div class="col-12">
+                    <div class="carousel carousel-dark slide" data-bs-ride="false">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"   class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"   aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"   aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a href="#">
+                                <img src="./img/bowie.jpg" class="d-block w-100" alt="david-bowie">
+                                <div class="carousel-caption">
+                                    <h3 class="fw-semibold">Ya se puede ver el primer trailer de Moonage Daydream</h3>
+                                    <p class="fw-semibold">El director Brett Morgen muestra imagenes de su pelicula sobre David Bowie.</p></a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="#">
+                                <img src="./img/rsd.jpg" class="d-block w-100" alt="disqueria">
+                                <div class="carousel-caption">
+                                    <h3 class="fw-semibold">Record Store Day 2022</h3>
+                                    <p class="fw-semibold">Enterate las novedades del evento que todos los coleccionistas de discos esperan.</p></a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="#">
+                                <img src="./img/ai.jpg " class="d-block w-100" alt="inteligencia-artificial">
+                                <div class="carousel-caption">
+                                    <h3 class="fw-semibold">Inteligencia Artificial</h3>
+                                    <p class="fw-semibold">Los 10 discos de musica experimental electronica que necesitas conocer.</p></a>
+                                </div>
+                            </div>
+                        </div>
+                            <button class="carousel-control-prev" type="button"    data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"    data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+
+            <div class="index__ultNoticias--mobile">
+                <div class="index__ultNoticias--articulo">
+                    <a href="./pages/noticias/noticia-1.html"><img src="./img/bowie.jpg" alt="David Bowie"></a>
+                    <h3><a href="./pages/noticias/noticia-1.html">Ya se puede ver el primer trailer de Moonage Daydream</a></h3>
+                    <p><a href="./pages/noticias/noticia-1.html">El director Brett Morgen muestra imagenes de su pelicula sobre David Bowie.</a></p>            
+                </div>
+                <div class="index__ultNoticias--articulo">
+                    <a href="./pages/noticias/noticia-2.html"><img src="./img/rsd.jpg" alt="Disqueria"></a>
+                    <h3><a href="./pages/noticias/noticia-2.html">Record Store Day 2022</a></h3>
+                    <p><a href="./pages/noticias/noticia-2.html">Enterate las novedades del evento que todos los coleccionistas de discos esperan.</a></p>
+                </div>
+                <div class="index__ultNoticias--articulo">
+                    <a href="./pages/noticias/noticia-3.html"> <img src="./img/ai.jpg" alt="Portada Artificial Intelligence"></a>
+                    <h3><a href="./pages/noticias/noticia-3.html">Inteligencia Artificial</a></h3>
+                    <p><a href="./pages/noticias/noticia-3.html">Los 5 discos de musica experimental electronica que necesitas conocer.</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="index__ultResenas--titulo">
+                <h2>ULTIMAS RESEÑAS</h2>
+            </div>
+
+            <div class="index__ultResenas--grid">
+                <div class="index__ultResenas--articulo">
+                    <div class="index__ultResenas--portada">
+                        <a href="./pages/resenas/resena-1.html"><img src="./img/monk.jpg" alt="portada album"></a>
+                    </div>
+                    <div class="index__ultResenas--info">
+                        <h3><a href="./pages/resenas/resena-1.html">Genius of Modern Music, Vol. 1</a></h3>
+                        <h4><a href="./pages/resenas/resena-1.html">Thelonious Monk</a></h4>
+                        <p>1947</p>
+                        <div class="index__ultResenas--autor">
+                            <p>por: Autor</p>
+                        </div>    
+                    </div>
+                </div>
+                <div class="index__ultResenas--articulo">
+                    <div class="index__ultResenas--portada">
+                        <a href="./pages/resenas/resena-2.html"><img src="./img/autechre.jpg" alt="portada album"></a>
+                    </div>
+                    <div class="index__ultResenas--info">
+                        <h3><a href="./pages/resenas/resena-2.html">Amber</a></h3>
+                        <h4><a href="./pages/resenas/resena-2.html">Autechre</a></h4>
+                        <p>1994</p>
+                        <div class="index__ultResenas--autor">
+                            <p>por: Autor</p>
+                        </div>    
+                    </div>
+                </div>
+                <div class="index__ultResenas--articulo">
+                    <div class="index__ultResenas--portada">
+                        <a href="./pages/resenas/resena-3.html"><img src="./img/bpsychosis.jpg" alt="portada album"></a>
+                    </div>
+                    <div class="index__ultResenas--info">
+                        <h3><a href="./pages/resenas/resena-3.html">Hex</a></h3>
+                        <h4><a href="./pages/resenas/resena-3.html">Bark Psychosis</a></h4>
+                        <p>1994</p>
+                        <div class="index__ultResenas--autor">
+                            <p>por: Autor</p>
+                        </div>    
+                    </div>
+                </div>
+                <div class="index__ultResenas--articulo">
+                    <div class="index__ultResenas--portada">
+                        <a href="./pages/resenas/resena-4.html"><img src="./img/branca.jpg" alt="portada album"></a>
+                    </div>
+                    <div class="index__ultResenas--info">
+                        <h3><a href="./pages/resenas/resena-4.html">The Ascension</a></h3>
+                        <h4><a href="./pages/resenas/resena-4.html">Glenn Branca</a></h4>
+                        <p>1981</p>
+                        <div class="index__ultResenas--autor">
+                            <p>por: Autor</p>
+                        </div>    
+                    </div>
+                </div>           
+            </div>    
+        </section>
+
+    </main>
+    
+    <footer>
+        <div id="footer" class="row d-none d-sm-block d-sm-none d-md-block d-md-none d-lg-flex">
+            <div class="col-5 d-flex align-items-center justify-content-end pb-5">
+                <div class="text-end">
+                    <p class="fw-semibold">Website</p>
+                    <p class="fw-semibold">2022</p>
+                </div>        
+            </div>
+            <div class="col-2 d-flex justify-content-center align-items-center">
+                <img src="./img/logo-footer.png " id="animacionLp" class="img-fluid" alt="logo-footer">
+            </div>
+            <div class="col-5 d-flex align-items-center justify-content-start pb-3">
+                <div class="col-5 text-start">
+                    <p class="fw-semibold">POLITICAS</p>
+                    <p><a class="text-decoration-none" href="#">Privacidad</a></p>         
+                    <p><a class="text-decoration-none" href="#">Condiciones del servicio</a></p>
+                </div>    
+            </div>
+        </div>    
+    </footer>
+
+
+
+        <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</body>
+</html>

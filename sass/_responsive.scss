@@ -1,0 +1,894 @@
+
+@media screen and (max-width: 550px) {
+
+    body {
+        padding-bottom: 50px;
+        background-color: $colorPrincipal;
+    }
+
+    /* HEADER */
+    .header__desktop {
+        display: none;
+    }
+
+
+    .header__logo {
+        width: 100%;
+        max-width: 550px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+            h1 {
+                font-family: "Ink Highlight";
+                font-size: 4rem;
+                color: $colorLogo;
+            }
+    }
+    
+    .header__menu--mobile {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		
+            ul {
+                list-style-type: none;
+                display: flex;
+                flex-flow: row;
+                justify-content: stretch;
+                align-content: center;
+                border: solid black 1px;
+                margin-bottom: 0px;
+                padding-left:0px;
+                background-color: $colorPrincipal;
+
+                    li {
+		                border: solid black 1px;
+		                width: 100%;
+		                display: flex;
+		                justify-content: center;
+                        font-size: 2rem;
+                    }
+            }
+    }
+
+    /* INDEX */
+    .index__ultNoticias--titulo {
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    #index__ultNoticias--carousel {
+        display:none;
+    }
+
+    .index__ultNoticias--articulo {
+        padding: 0.5rem;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            h3 {
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+            }
+    }
+
+    .index__ultResenas--titulo {
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    .index__ultResenas--articulo {
+        display: flex;
+        flex-direction: row;
+        padding: 0.5rem;
+
+            img {
+                width: 12rem;
+                height: auto;
+                padding: 0.5rem;
+            }
+
+            .index__ultResenas--info {
+                width: 100%;
+                padding: 0.5rem;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+
+                    .index__ultResenas--autor {
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        padding-block: 0.5rem;
+                    }
+            }
+
+    }
+
+    /* NOTICIAS */
+    .noticias__titulo {
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    .noticias__cont--articulo {
+        padding: 0.5rem;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            h3 {
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+            }
+    }
+
+    /* RESEÑAS */
+    .resenas__titulo {
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    .resenas__cont--articulo {
+        display: flex;
+        flex-direction: row;
+        padding: 0.5rem;
+
+            img {
+                width: 12rem;
+                height: auto;
+                padding: 0.5rem;
+            }
+
+            .resenas__cont--info {
+                width: 100%;
+                padding: 0.5rem;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+
+                    .resenas__cont--autor {
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        padding-block: 0.5rem;
+                    }
+            }
+    }
+
+    /* AGENDA */
+    $min-width: 320px;
+    $number-of-days: 7;
+    $column-width: percentage(1/$number-of-days);
+    
+    .agenda__calendario {
+        h2,p {
+            text-align: center;
+        }
+    }
+    
+    .container {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 1em;
+    }
+      
+    .row:before {
+        display: table;
+        content: " ";
+    }
+      
+    .grid-calendar {
+        min-width: $min-width;
+        
+        .row {
+            margin-right: -15px;
+            margin-left: -15px;
+            margin: 0;          
+        }
+        
+        .calendar-week .grid-cell {
+            border: 1px solid #fff;
+        }
+      
+        .calendar-week-header .grid-cell > div > div {
+            padding-bottom: 10px;
+            height: auto;
+        }
+        
+        .grid-cell {
+            display: inline-block;
+            min-height: 1px;
+            padding: 0;
+            position: relative;
+            width: $column-width;
+      
+                &.previous-month {
+                    color: #a6a6a6;
+                }
+          
+                &.next-month {
+                    background-color: #e1e1e1;
+                }
+          
+            > div {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+      
+            > div {
+                height: 0;
+                padding: 50% 0;
+            }
+          }
+        }
+    }
+
+    .agenda__calendario--marker {
+        font-weight: 700;
+        background-color: #7b7676f0;
+    }
+
+    .agenda__fechaSelect {
+
+            h3 {
+                text-align: center;
+                padding-bottom: 1rem;
+            }
+    }
+
+    .agenda__fechaSelect--imgEvento {
+        display: flex;
+        justify-content: center;
+        padding-right: 4rem;
+
+            img {
+                width: 6rem;
+            }
+    }
+
+}
+
+@media screen and (min-width: 551px) and (max-width: 1023px) {
+    body {
+        padding-bottom: 50px;
+        background-color: $colorPrincipal;
+    }
+
+    /* HEADER */
+    .header__desktop {
+        display: none;
+    }
+
+    .header__logo {
+        width: 100%;
+        max-width: 1023px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+            h1 {
+                font-family: "Ink Highlight";
+                font-size: 5rem;
+                color: $colorLogo;
+            }
+    }
+    
+    .header__menu--mobile {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+        z-index: 9;
+		
+            ul {
+                list-style-type: none;
+                display: flex;
+                flex-flow: row;
+                justify-content: stretch;
+                width: 100%;
+                align-content: center;
+                border: solid black 1px;
+                margin-bottom: 0px;
+                padding-left:0px;
+
+                    li {
+		                border: solid black 1px;
+                        background-color: $colorPrincipal;
+                        width: 1022px;
+		                display: flex;
+		                justify-content: center;
+                        font-size: 2rem;
+                    }
+            }
+    }
+
+    /* INDEX */
+    .index__ultNoticias--titulo {
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    .index__ultNoticias--mobile {
+        display:none;
+    }
+    
+    .index__ultResenas--titulo {
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    .index__ultResenas--grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        justify-content: center;
+        
+            .index__ultResenas--articulo {
+                display: flex;
+                flex-direction: column;
+            
+                    .index__ultResenas--portada {
+                        justify-self: center;
+                        align-self: center;
+                        padding-bottom: 0.5rem;
+
+                            img {
+                                width: 15rem;
+                                height: auto;
+                            }
+                    }
+                
+                    .index__ultResenas--info {
+                        text-align: center;
+                    }
+
+            }
+    }
+
+    /* NOTICIAS */
+    .noticias__titulo {
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    .noticias__cont--articulo {
+        padding: 0.5rem;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            h3 {
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+            }
+    }
+
+    /* RESEÑAS */
+    .resenas__titulo {
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    .resenas__cont--grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; 
+        justify-items: center;
+        justify-content: center;
+        
+            .resenas__cont--articulo {
+                display: flex;
+                flex-direction: column;
+            
+                    .resenas__cont--portada {
+                        justify-self: center;
+                        align-self: center;
+                        padding-bottom: 0.5rem;
+
+                            img {
+                                width: 15rem;
+                                height: auto;
+                            }
+                    }
+                
+                    .resenas__cont--info {
+                        text-align: center;
+                    }
+            }
+    }
+
+    /* AGENDA */
+    $min-width: 320px;
+    $number-of-days: 7;
+    $column-width: percentage(1/$number-of-days);
+
+    
+     
+    .agenda__calendario {
+        h2,p {
+            text-align: center;
+        }
+    }
+
+
+    .container {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 1em;
+    }
+      
+    .row:before {
+        display: table;
+        content: " ";
+    }
+      
+    .grid-calendar {
+        min-width: $min-width;
+        
+        .row {
+            margin-right: -15px;
+            margin-left: -15px;
+            margin: 0;          
+        }
+        
+        .calendar-week .grid-cell {
+            border: 1px solid #fff;
+        }
+      
+        .calendar-week-header .grid-cell > div > div {
+            padding-bottom: 10px;
+            height: auto;
+        }
+        
+        .grid-cell {
+            display: inline-block;
+            min-height: 1px;
+            padding: 0;
+            position: relative;
+            width: $column-width;
+      
+                &.previous-month {
+                    color: #a6a6a6;
+                }
+          
+                &.next-month {
+                    background-color: #e1e1e1;
+                }
+          
+            > div {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+      
+            > div {
+                height: 0;
+                padding: 50% 0;
+            }
+          }
+        }
+    }
+
+    .agenda__calendario--marker {
+        font-weight: 700;
+        background-color: #7b7676f0;
+    }
+
+    .agenda__fechaSelect {
+
+            h3 {
+                text-align: center;
+                padding-bottom: 1rem;
+            }
+    }
+
+    .agenda__fechaSelect--imgEvento {
+        display: flex;
+        justify-content: center;
+        padding-right: 4rem;
+
+            img {
+                width: 6rem;
+            }
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        background-color: $colorPrincipal;
+    }
+
+    /* HEADER */
+    .header__logo {
+        display: none;
+    }
+
+    .header__menu--mobile {
+        display: none;
+    }
+
+    .header__desktop {
+        display: grid;
+        grid-template-areas: 
+            "redes logo player"
+            "redes menu player";
+        grid-template-columns: 1fr 1fr 1fr;
+        background-color: $colorPrincipal;
+            
+            & &--redes {
+                grid-area: redes;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                padding-left: 15px;
+
+                .header__desktop--iconoRedes {
+                        font-size: 3rem;
+                        transition: all 500ms;            
+                    }
+
+                .header__desktop--iconoRedes:hover {
+                        font-size: 3.2rem;
+                }    
+
+            }
+    
+            & &--logo {
+                grid-area: logo;
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                    
+                    a {
+                        color: $colorLogo
+                    }
+
+                    h1 {
+                        padding-top: 50px;
+                        text-align: center;
+                        font-family: "Ink Highlight";
+                        font-size: 80px;
+                        transform: scale(1, 1);            
+                    }
+    
+                    h1:hover {
+                        transform: scale(1.1, 1.1);
+                        transition: all 500ms;            
+                    }
+    
+                    @font-face {
+                        font-family: Ink-Highlight;
+                        src: url(./fonts/Ink-Highlight.ttf);
+                    }            
+            }
+    
+            & &--menu {
+                grid-area: menu;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+    
+                    ul {
+                        list-style-type: none;
+                        display: inline-flex;
+                        flex-flow: row;
+                        justify-content: space-evenly;
+                        
+                            a {
+                                color: $colorLogo;
+                            }
+
+                            li {
+                                padding: 20px;
+                                font-size: larger;
+                                font-family: Arial, Helvetica, sans-serif;                    
+                            }
+    
+                            li:hover {
+                                font-weight: bold;
+                            }
+                    }
+            }
+        
+            & &--player {
+                grid-area: player;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                padding-right: 1rem;
+            }
+    }
+
+    /* INDEX */
+    .index__ultNoticias--mobile {
+        display: none;
+    }
+    
+    .index__ultNoticias--titulo {
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    .index__ultNoticias--mobile {
+        display:none;
+    }
+
+    .index__ultResenas--titulo {
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    .index__ultResenas--grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-items: center;
+        justify-content: center;
+        
+            .index__ultResenas--articulo {
+                display: flex;
+                flex-direction: column;
+            
+                    .index__ultResenas--portada {
+                        justify-self: center;
+                        align-self: center;
+                        padding-bottom: 0.5rem;
+
+                            img {
+                                width: 15rem;
+                                height: auto;
+                            }
+                    }
+                
+                    .index__ultResenas--info {
+                        text-align: center;
+                    }
+            }
+    }
+
+    /* NOTICIAS */
+    .noticias__cont--mobile {
+        display:none;
+    }
+
+    .noticias__titulo {
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    .noticias__desktop--fotoNoti {
+        padding: 0;
+        margin: 0;
+
+            img {
+                width: 100%;
+            }
+    }
+
+    .noticias__desktop--ultArt {
+        padding: 0;
+        margin: 0;
+
+            h3 {
+                padding: 1rem 0 1rem 2rem;
+            }
+
+            p {
+                padding: 1rem 0 1rem 2rem;
+            }
+
+            a {
+                color: $colorPrincipal;
+            }
+    }
+
+    .noticias__desktop--grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; 
+        padding-top: 4rem;
+
+            .noticias__desktop--art {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                    img {
+                        width: 25rem;
+                        height: auto;
+                    }
+
+                    p {
+                        text-align: center;
+                    }
+
+            }
+    }
+
+    /* RESEÑAS */
+    .resenas__titulo {
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    .resenas__cont--grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; 
+        justify-items: center;
+        justify-content: center;
+        
+            .resenas__cont--articulo {
+                display: flex;
+                flex-direction: column;
+            
+                    .resenas__cont--portada {
+                        justify-self: center;
+                        align-self: center;
+                        padding-bottom: 0.5rem;
+
+                            img {
+                                width: 15rem;
+                                height: auto;
+                            }
+                    }
+                
+                    .resenas__cont--info {
+                        text-align: center;
+                    }
+            }
+    }
+
+        /* AGENDA */
+        $min-width: 320px;
+        $number-of-days: 7;
+        $column-width: percentage(1/$number-of-days);
+    
+        .agenda__calendario {
+            h2,p {
+                text-align: center;
+            }
+        }
+
+        .container {
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 1em;
+        }
+          
+        .row:before {
+            display: table;
+            content: " ";
+        }
+          
+        .grid-calendar {
+            min-width: $min-width;
+            
+            .row {
+                margin-right: -15px;
+                margin-left: -15px;
+                margin: 0;          
+            }
+            
+            .calendar-week .grid-cell {
+                border: 1px solid #fff;
+            }
+          
+            .calendar-week-header .grid-cell > div > div {
+                padding-bottom: 10px;
+                height: auto;
+            }
+            
+            .grid-cell {
+                display: inline-block;
+                min-height: 1px;
+                padding: 0;
+                position: relative;
+                width: $column-width;
+          
+                    &.previous-month {
+                        color: #a6a6a6;
+                    }
+              
+                    &.next-month {
+                        background-color: #e1e1e1;
+                    }
+              
+                > div {
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+          
+                > div {
+                    height: 0;
+                    padding: 50% 0;
+                }
+              }
+            }
+        }    
+
+        .agenda__calendario--marker {
+            font-weight: 700;
+            background-color: #7b7676f0;
+        }
+
+        .agenda__fechaSelect {
+
+                h3 {
+                    text-align: center;
+                    padding-bottom: 1rem;
+                }
+        }
+
+        .agenda__fechaSelect--imgEvento {
+            display: flex;
+            justify-content: end;
+            padding-right: 4rem;
+
+                img {
+                    width: 6rem;
+                }
+        }
+
+    /* FOOTER */
+    #animacionLp {
+        grid-area: imgFoot;
+        width: auto;
+        height: 150px;
+        margin: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation-name: animacionFooter;
+        animation-duration: 10s;
+        animation-timing-function:linear;
+        animation-delay: 0;
+        animation-iteration-count:infinite;
+    }
+    
+    @keyframes animacionFooter {
+        0% {
+            transform: rotate(0deg);
+        }
+    
+        25% {
+            transform: rotate(90deg);
+        }
+    
+        50% {
+            transform: rotate(180deg);
+        }
+    
+        75% {
+            transform: rotate(270deg);
+        }
+        
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    
+
+}
