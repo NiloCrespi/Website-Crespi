@@ -156,6 +156,9 @@ a:hover {
     text-align: center;
     padding: 0.5rem;
   }
+  .noticias__desktop {
+    display: none;
+  }
   .noticias__cont--articulo {
     padding: 0.5rem;
   }
@@ -407,6 +410,9 @@ a:hover {
   .noticias__titulo {
     text-align: center;
     padding: 0.5rem;
+  }
+  .noticias__desktop {
+    display: none;
   }
   .noticias__cont--articulo {
     padding: 0.5rem;
