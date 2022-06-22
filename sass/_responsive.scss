@@ -7,12 +7,19 @@
     }
 
     /* HEADER */
-    .header__desktop {
+    .header__desktop--redes {
         display: none;
     }
 
+    .header__desktop--menu {
+        display: none;
+    }
 
-    .header__logo {
+    .header__desktop--player {
+        display: none;
+    }
+
+    .header__desktop--logo {
         width: 100%;
         max-width: 550px;
         height: 80px;
@@ -20,7 +27,7 @@
         justify-content: center;
         align-items: center;
 
-            h1 {
+            a {
                 font-family: "Ink Highlight";
                 font-size: 4rem;
                 color: $colorLogo;
@@ -276,11 +283,19 @@
     }
 
     /* HEADER */
-    .header__desktop {
+    .header__desktop--redes {
         display: none;
     }
 
-    .header__logo {
+    .header__desktop--menu {
+        display: none;
+    }
+
+    .header__desktop--player {
+        display: none;
+    }
+
+    .header__desktop--logo {
         width: 100%;
         max-width: 1023px;
         height: 80px;
@@ -288,7 +303,7 @@
         justify-content: center;
         align-items: center;
 
-            h1 {
+            a {
                 font-family: "Ink Highlight";
                 font-size: 5rem;
                 color: $colorLogo;
