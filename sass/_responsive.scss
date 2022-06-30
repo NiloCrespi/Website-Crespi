@@ -29,7 +29,7 @@
 
             a {
                 font-family: "Ink Highlight";
-                font-size: 4rem;
+                font-size: 3rem;
                 color: $colorLogo;
             }
     }
@@ -88,13 +88,11 @@
     }
 
     .index__ultResenas--titulo {
-        text-align: center;
-        padding: 0.5rem;
+        @extend .index__ultNoticias--titulo
     }
 
     .index__ultResenas--articulo {
-        display: flex;
-        flex-direction: row;
+        @include flex (flex, row);
         padding: 0.5rem;
 
             img {
@@ -154,6 +152,14 @@
         padding: 0.5rem;
     }
 
+    .resenas__descrip {
+        display: flex;
+        justify-content: center;
+        font-size: 1rem;
+        padding: 1rem;
+        text-align: center;
+    }
+
     .resenas__cont--articulo {
         display: flex;
         flex-direction: row;
@@ -169,13 +175,11 @@
                 width: 100%;
                 padding: 0.5rem;
                 height: auto;
-                display: flex;
-                flex-direction: column;
+                @include flex (flex, column);
 
                     .resenas__cont--autor {
                         height: 100%;
-                        display: flex;
-                        flex-direction: column;
+                        @include flex (flex, column);
                         justify-content: flex-end;
                         padding-block: 0.5rem;
                     }
@@ -186,13 +190,22 @@
     $min-width: 320px;
     $number-of-days: 7;
     $column-width: percentage(1/$number-of-days);
-    
+
     .agenda__calendario {
+        
+        h2 {
+            font-size: 2rem;
+        }
+        
         h2,p {
             text-align: center;
         }
+
+        .agenda__calendario--monthText {
+            font-size: 2.5rem;
+        }
     }
-    
+
     .container {
         max-width: 1000px;
         margin-left: auto;
@@ -229,6 +242,7 @@
             padding: 0;
             position: relative;
             width: $column-width;
+            font-size: 1rem;
       
                 &.previous-month {
                     color: #a6a6a6;
@@ -240,23 +254,32 @@
           
             > div {
                 display: flex;
-                justify-content: center;
+                justify-content: end;
                 width: 100%;
       
             > div {
                 height: 0;
                 padding: 50% 0;
             }
+
+            span {
+                padding-right: 1rem;
+            }
+
           }
         }
-    }
+    }    
 
     .agenda__calendario--marker {
         font-weight: 700;
+        font-size: 2rem;
         background-color: #7b7676f0;
     }
 
     .agenda__fechaSelect {
+        border: black solid 4px;
+        border-radius: 40px;
+        margin-inline: 1.5rem;
 
             h3 {
                 text-align: center;
@@ -264,19 +287,70 @@
             }
     }
 
+    .agenda__fechaSelect--cardEvento {
+        padding-block: 1rem;
+    }
+
+    .agenda__fechaSelect--infoEvento {
+        padding-top: 1rem;
+    }
+
+    .agenda__fechaSelect--infoBold {
+        font-weight: 600;
+    }
+
     .agenda__fechaSelect--imgEvento {
         display: flex;
-        justify-content: center;
-        padding-right: 4rem;
+        justify-content: start;
 
             img {
                 width: 6rem;
             }
     }
 
+
+    /* CONTACTO */
+    .contacto__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn {
+        align-self: center;
+        background-color: $colorLogo;
+        transform: scale(1, 1); 
+        color: black ;           
+    }
+
+    .btn:hover {
+        transform: scale(1.1, 1.1);
+        transition: all 500ms;       
+        background-color: $colorLogo;
+        color: black;
+    }
+
+    .contacto__redesMob {
+        @include flex (flex, column);
+        align-items: center;
+    }
+
+    .contacto__redesMob--icons {
+        @include flex (inline-flex, row);
+        
+        .contacto__redesMob--icon {
+                padding-inline: 1rem;
+                font-size: 4rem;
+                transition: all500ms;            
+            }
+
+        .contacto__redesMob--icon:hover {
+                font-size: 4.2rem;
+        }    
+    }
+
 }
 
-@media screen and (min-width: 551px) and (max-width: 1023px) {
+@media screen and (min-width: 550px) and (max-width: 1023px) {
     body {
         padding-bottom: 50px;
         background-color: $colorPrincipal;
@@ -318,8 +392,7 @@
 		
             ul {
                 list-style-type: none;
-                display: flex;
-                flex-flow: row;
+                @include flex (flex, row);
                 justify-content: stretch;
                 width: 100%;
                 align-content: center;
@@ -377,9 +450,8 @@
         justify-content: center;
         
             .index__ultResenas--articulo {
-                display: flex;
-                flex-direction: column;
-            
+                @include flex (flex, column);
+
                     .index__ultResenas--portada {
                         justify-self: center;
                         align-self: center;
@@ -431,9 +503,18 @@
         padding: 0.5rem;
     }
 
+    .resenas__descrip {
+        display: flex;
+        justify-content: center;
+        font-size: 1rem;
+        padding: 1rem;
+        text-align: center;
+
+    }
+
     .resenas__cont--grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-columns: 1fr 1fr; 
         justify-items: center;
         justify-content: center;
         
@@ -463,14 +544,20 @@
     $number-of-days: 7;
     $column-width: percentage(1/$number-of-days);
 
-    
-     
     .agenda__calendario {
+        
+        h2 {
+            font-size: 2rem;
+        }
+        
         h2,p {
             text-align: center;
         }
-    }
 
+        .agenda__calendario--monthText {
+            font-size: 2.5rem;
+        }
+    }
 
     .container {
         max-width: 1000px;
@@ -508,6 +595,7 @@
             padding: 0;
             position: relative;
             width: $column-width;
+            font-size: 1rem;
       
                 &.previous-month {
                     color: #a6a6a6;
@@ -519,23 +607,32 @@
           
             > div {
                 display: flex;
-                justify-content: center;
+                justify-content: end;
                 width: 100%;
       
             > div {
                 height: 0;
                 padding: 50% 0;
             }
+
+            span {
+                padding-right: 1rem;
+            }
+
           }
         }
-    }
+    }    
 
     .agenda__calendario--marker {
         font-weight: 700;
+        font-size: 1rem;
         background-color: #7b7676f0;
     }
 
     .agenda__fechaSelect {
+        border: black solid 4px;
+        border-radius: 40px;
+        margin-inline: 3rem;
 
             h3 {
                 text-align: center;
@@ -543,14 +640,66 @@
             }
     }
 
+    .agenda__fechaSelect--cardEvento {
+        display: flex;
+        flex-direction: row wrap;
+        padding-block: 1rem;
+    }
+
+    .agenda__fechaSelect--infoEvento {
+        padding-top: 1rem;
+    }
+
+    .agenda__fechaSelect--infoBold {
+        font-weight: 600;
+    }
+
     .agenda__fechaSelect--imgEvento {
         display: flex;
         justify-content: center;
-        padding-right: 4rem;
 
             img {
-                width: 6rem;
+                width: 9rem;
             }
+    }
+
+    /* CONTACTO */
+    .contacto__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn {
+        align-self: center;
+        background-color: $colorLogo;
+        transform: scale(1, 1); 
+        color: black ;           
+    }
+
+    .btn:hover {
+        transform: scale(1.1, 1.1);
+        transition: all 500ms;       
+        background-color: $colorLogo;
+        color: black;
+    }
+
+    .contacto__redesMob {
+        @include flex (flex, column);
+        align-items: center;
+    }
+
+    .contacto__redesMob--icons {
+        @include flex (inline-flex, row);
+        
+        .contacto__redesMob--icon {
+                padding-inline: 1rem;
+                font-size: 4rem;
+                transition: all500ms;            
+            }
+
+        .contacto__redesMob--icon:hover {
+                font-size: 4.2rem;
+        }    
     }
 
 }
@@ -579,8 +728,7 @@
             
             & &--redes {
                 grid-area: redes;
-                display: flex;
-                flex-direction: column;
+                @include flex (flex, column);
                 justify-content: start;
                 padding-left: 15px;
 
@@ -609,7 +757,7 @@
                         padding-top: 50px;
                         text-align: center;
                         font-family: "Ink Highlight";
-                        font-size: 80px;
+                        font-size: 4rem;
                         transform: scale(1, 1);            
                     }
     
@@ -626,36 +774,33 @@
     
             & &--menu {
                 grid-area: menu;
-                display: flex;
-                justify-content: center;
-                align-content: center;
-    
+                justify-items: center;
+                
                     ul {
                         list-style-type: none;
-                        display: inline-flex;
-                        flex-flow: row;
-                        justify-content: space-evenly;
+                        display: flex;
+                        padding-inline: 1rem;
                         
                             a {
                                 color: $colorLogo;
                             }
 
                             li {
-                                padding: 20px;
-                                font-size: larger;
-                                font-family: Arial, Helvetica, sans-serif;                    
+                                padding-inline: 1.8rem;
+                                font-size: 1rem;
+                                font-family: Arial, Helvetica, sans-serif; 
                             }
     
                             li:hover {
                                 font-weight: bold;
+                                text-decoration: underline;
                             }
                     }
             }
         
             & &--player {
                 grid-area: player;
-                display: flex;
-                flex-direction: column;
+                @include flex (flex, column);
                 justify-content: center;
                 align-items: flex-end;
                 padding-right: 1rem;
@@ -681,6 +826,37 @@
         padding: 0.5rem;
     }
 
+    .index__ultNoticias--img {
+        opacity: 0.9;
+    }
+
+    .index__ultNoticias--txt {
+
+            h3 {
+                font-size: 2.1rem;
+                font-weight: 800;
+                color: #1f1a1a;
+                text-shadow:    
+                    -1px 1px 0 $colorPrincipal,
+                    1px 1px 0 $colorPrincipal,
+                    1px -1px 0 $colorPrincipal,
+                    -1px -1px 0 $colorPrincipal;
+            }
+
+            p {
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: #1f1a1a;
+                text-shadow:    
+                    -1px 1px 0 $colorPrincipal,
+                    1px 1px 0 $colorPrincipal,
+                    1px -1px 0 $colorPrincipal,
+                    -1px -1px 0 $colorPrincipal;
+            }
+
+
+    }
+
     .index__ultResenas--grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -688,9 +864,8 @@
         justify-content: center;
         
             .index__ultResenas--articulo {
-                display: flex;
-                flex-direction: column;
-            
+                @include flex (flex, column);
+
                     .index__ultResenas--portada {
                         justify-self: center;
                         align-self: center;
@@ -750,8 +925,7 @@
         padding-top: 4rem;
 
             .noticias__desktop--art {
-                display: flex;
-                flex-direction: column;
+                @include flex (flex, column);
                 justify-content: center;
                 align-items: center;
 
@@ -770,7 +944,14 @@
     /* RESEÑAS */
     .resenas__titulo {
         text-align: center;
-        padding: 0.5rem;
+        padding: 0.3rem;
+    }
+
+    .resenas__descrip {
+        display: flex;
+        justify-content: center;
+        font-size: 1rem;
+        padding-bottom: 1.5rem;
     }
 
     .resenas__cont--grid {
@@ -780,9 +961,8 @@
         justify-content: center;
         
             .resenas__cont--articulo {
-                display: flex;
-                flex-direction: column;
-            
+                @include flex (flex, column);
+                
                     .resenas__cont--portada {
                         justify-self: center;
                         align-self: center;
@@ -806,11 +986,20 @@
         $column-width: percentage(1/$number-of-days);
     
         .agenda__calendario {
+        
+            h2 {
+                font-size: 2rem;
+            }
+            
             h2,p {
                 text-align: center;
             }
+    
+            .agenda__calendario--monthText {
+                font-size: 2.5rem;
+            }
         }
-
+    
         .container {
             max-width: 1000px;
             margin-left: auto;
@@ -847,6 +1036,7 @@
                 padding: 0;
                 position: relative;
                 width: $column-width;
+                font-size: 2rem;
           
                     &.previous-month {
                         color: #a6a6a6;
@@ -858,23 +1048,32 @@
               
                 > div {
                     display: flex;
-                    justify-content: center;
+                    justify-content: end;
                     width: 100%;
           
                 > div {
                     height: 0;
                     padding: 50% 0;
                 }
+
+                span {
+                    padding-right: 1rem;
+                }
+
               }
             }
         }    
 
         .agenda__calendario--marker {
             font-weight: 700;
+            font-size: 2rem;
             background-color: #7b7676f0;
         }
 
         .agenda__fechaSelect {
+            border: black solid 4px;
+            border-radius: 40px;
+            margin-inline: 5rem;
 
                 h3 {
                     text-align: center;
@@ -882,15 +1081,46 @@
                 }
         }
 
+        .agenda__fechaSelect--cardEvento {
+            padding-block: 1rem;
+        }
+
+        .agenda__fechaSelect--infoBold {
+            font-weight: 600;
+        }
+
         .agenda__fechaSelect--imgEvento {
             display: flex;
             justify-content: end;
-            padding-right: 4rem;
 
                 img {
                     width: 6rem;
                 }
         }
+
+    /* CONTACTO */
+    .contacto__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn {
+        align-self: center;
+        transform: scale(1, 1);
+        color: #dec6e6;
+    }
+
+    .btn:hover {
+        transform: scale(1.1, 1.1);
+        transition: all 500ms; 
+        color: #dec6e6;      
+    }
+
+    .contacto__redesMob {
+        display: none;
+    }
+
+
 
     /* FOOTER */
     #animacionLp {

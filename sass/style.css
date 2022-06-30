@@ -53,8 +53,8 @@ a:hover {
   }
   .header__desktop--logo a {
     font-family: "Ink Highlight";
-    font-size: 4rem;
-    color: #5268a3;
+    font-size: 3rem;
+    color: #161317;
   }
   .header__menu--mobile {
     position: fixed;
@@ -92,7 +92,7 @@ a:hover {
     font-size: 2rem;
   }
   /* INDEX */
-  .index__ultNoticias--titulo {
+  .index__ultNoticias--titulo, .index__ultResenas--titulo {
     text-align: center;
     padding: 0.5rem;
   }
@@ -111,10 +111,6 @@ a:hover {
   }
   .index__ultNoticias--articulo p {
     text-align: center;
-  }
-  .index__ultResenas--titulo {
-    text-align: center;
-    padding: 0.5rem;
   }
   .index__ultResenas--articulo {
     display: -webkit-box;
@@ -183,6 +179,17 @@ a:hover {
     text-align: center;
     padding: 0.5rem;
   }
+  .resenas__descrip {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
   .resenas__cont--articulo {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -225,8 +232,14 @@ a:hover {
     padding-block: 0.5rem;
   }
   /* AGENDA */
+  .agenda__calendario h2 {
+    font-size: 2rem;
+  }
   .agenda__calendario h2, .agenda__calendario p {
     text-align: center;
+  }
+  .agenda__calendario .agenda__calendario--monthText {
+    font-size: 2.5rem;
   }
   .container {
     max-width: 1000px;
@@ -259,6 +272,7 @@ a:hover {
     padding: 0;
     position: relative;
     width: 14.28571%;
+    font-size: 1rem;
   }
   .grid-calendar .grid-cell.previous-month {
     color: #a6a6a6;
@@ -270,38 +284,112 @@ a:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
     width: 100%;
   }
   .grid-calendar .grid-cell > div > div {
     height: 0;
     padding: 50% 0;
   }
+  .grid-calendar .grid-cell > div span {
+    padding-right: 1rem;
+  }
   .agenda__calendario--marker {
     font-weight: 700;
+    font-size: 2rem;
     background-color: #7b7676f0;
+  }
+  .agenda__fechaSelect {
+    border: black solid 4px;
+    border-radius: 40px;
+    margin-inline: 1.5rem;
   }
   .agenda__fechaSelect h3 {
     text-align: center;
     padding-bottom: 1rem;
   }
+  .agenda__fechaSelect--cardEvento {
+    padding-block: 1rem;
+  }
+  .agenda__fechaSelect--infoEvento {
+    padding-top: 1rem;
+  }
+  .agenda__fechaSelect--infoBold {
+    font-weight: 600;
+  }
   .agenda__fechaSelect--imgEvento {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding-right: 4rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
   }
   .agenda__fechaSelect--imgEvento img {
     width: 6rem;
   }
+  /* CONTACTO */
+  .contacto__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .btn {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    background-color: #161317;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    color: black;
+  }
+  .btn:hover {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+    -webkit-transition: all 500ms;
+    transition: all 500ms;
+    background-color: #161317;
+    color: black;
+  }
+  .contacto__redesMob {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contacto__redesMob--icons {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .contacto__redesMob--icons .contacto__redesMob--icon {
+    padding-inline: 1rem;
+    font-size: 4rem;
+    -webkit-transition: all500ms;
+    transition: all500ms;
+  }
+  .contacto__redesMob--icons .contacto__redesMob--icon:hover {
+    font-size: 4.2rem;
+  }
 }
 
-@media screen and (min-width: 551px) and (max-width: 1023px) {
+@media screen and (min-width: 550px) and (max-width: 1023px) {
   body {
     padding-bottom: 50px;
     background-color: #dec6e6;
@@ -333,7 +421,7 @@ a:hover {
   .header__desktop--logo a {
     font-family: "Ink Highlight";
     font-size: 5rem;
-    color: #5268a3;
+    color: #161317;
   }
   .header__menu--mobile {
     position: fixed;
@@ -348,8 +436,8 @@ a:hover {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row;
-            flex-flow: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: stretch;
         -ms-flex-pack: stretch;
             justify-content: stretch;
@@ -373,7 +461,7 @@ a:hover {
     font-size: 2rem;
   }
   /* INDEX */
-  .index__ultNoticias--titulo {
+  .index__ultNoticias--titulo, .index__ultResenas--titulo {
     text-align: center;
     padding: 0.5rem;
   }
@@ -457,11 +545,22 @@ a:hover {
     text-align: center;
     padding: 0.5rem;
   }
+  .resenas__descrip {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
   .resenas__cont--grid {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     justify-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -492,8 +591,14 @@ a:hover {
     text-align: center;
   }
   /* AGENDA */
+  .agenda__calendario h2 {
+    font-size: 2rem;
+  }
   .agenda__calendario h2, .agenda__calendario p {
     text-align: center;
+  }
+  .agenda__calendario .agenda__calendario--monthText {
+    font-size: 2.5rem;
   }
   .container {
     max-width: 1000px;
@@ -526,6 +631,7 @@ a:hover {
     padding: 0;
     position: relative;
     width: 14.28571%;
+    font-size: 1rem;
   }
   .grid-calendar .grid-cell.previous-month {
     color: #a6a6a6;
@@ -537,22 +643,47 @@ a:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
     width: 100%;
   }
   .grid-calendar .grid-cell > div > div {
     height: 0;
     padding: 50% 0;
   }
+  .grid-calendar .grid-cell > div span {
+    padding-right: 1rem;
+  }
   .agenda__calendario--marker {
     font-weight: 700;
+    font-size: 1rem;
     background-color: #7b7676f0;
+  }
+  .agenda__fechaSelect {
+    border: black solid 4px;
+    border-radius: 40px;
+    margin-inline: 3rem;
   }
   .agenda__fechaSelect h3 {
     text-align: center;
     padding-bottom: 1rem;
+  }
+  .agenda__fechaSelect--cardEvento {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row wrap;
+            flex-direction: row wrap;
+    padding-block: 1rem;
+  }
+  .agenda__fechaSelect--infoEvento {
+    padding-top: 1rem;
+  }
+  .agenda__fechaSelect--infoBold {
+    font-weight: 600;
   }
   .agenda__fechaSelect--imgEvento {
     display: -webkit-box;
@@ -561,10 +692,66 @@ a:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding-right: 4rem;
   }
   .agenda__fechaSelect--imgEvento img {
-    width: 6rem;
+    width: 9rem;
+  }
+  /* CONTACTO */
+  .contacto__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .btn {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    background-color: #161317;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    color: black;
+  }
+  .btn:hover {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+    -webkit-transition: all 500ms;
+    transition: all 500ms;
+    background-color: #161317;
+    color: black;
+  }
+  .contacto__redesMob {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contacto__redesMob--icons {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .contacto__redesMob--icons .contacto__redesMob--icon {
+    padding-inline: 1rem;
+    font-size: 4rem;
+    -webkit-transition: all500ms;
+    transition: all500ms;
+  }
+  .contacto__redesMob--icons .contacto__redesMob--icon:hover {
+    font-size: 4.2rem;
   }
 }
 
@@ -626,13 +813,13 @@ a:hover {
             justify-content: center;
   }
   .header__desktop .header__desktop--logo a {
-    color: #5268a3;
+    color: #161317;
   }
   .header__desktop .header__desktop--logo h1 {
     padding-top: 50px;
     text-align: center;
     font-family: "Ink Highlight";
-    font-size: 80px;
+    font-size: 4rem;
     -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
   }
@@ -652,38 +839,26 @@ a:hover {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
     grid-area: menu;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    justify-items: center;
   }
   .header__desktop .header__desktop--menu ul {
     list-style-type: none;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row;
-            flex-flow: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-inline: 1rem;
   }
   .header__desktop .header__desktop--menu ul a {
-    color: #5268a3;
+    color: #161317;
   }
   .header__desktop .header__desktop--menu ul li {
-    padding: 20px;
-    font-size: larger;
+    padding-inline: 1.8rem;
+    font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;
   }
   .header__desktop .header__desktop--menu ul li:hover {
     font-weight: bold;
+    text-decoration: underline;
   }
   .header__desktop .header__desktop--player {
     -ms-grid-row: 1;
@@ -709,7 +884,7 @@ a:hover {
   .index__ultNoticias--mobile {
     display: none;
   }
-  .index__ultNoticias--titulo {
+  .index__ultNoticias--titulo, .index__ultResenas--titulo {
     text-align: center;
     padding: 0.5rem;
   }
@@ -719,6 +894,21 @@ a:hover {
   .index__ultResenas--titulo {
     text-align: center;
     padding: 0.5rem;
+  }
+  .index__ultNoticias--img {
+    opacity: 0.7;
+  }
+  .index__ultNoticias--txt h3 {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: #1f1a1a;
+    text-shadow: -1px 1px 0 antiquewhite, 1px 1px 0 antiquewhite, 1px -1px 0 antiquewhite, -1px -1px 0 antiquewhite;
+  }
+  .index__ultNoticias--txt p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1f1a1a;
+    text-shadow: -1px 1px 0 antiquewhite, 1px 1px 0 antiquewhite, 1px -1px 0 antiquewhite, -1px -1px 0 antiquewhite;
   }
   .index__ultResenas--grid {
     display: -ms-grid;
@@ -816,6 +1006,15 @@ a:hover {
     text-align: center;
     padding: 0.5rem;
   }
+  .resenas__descrip {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 1rem;
+  }
   .resenas__cont--grid {
     display: -ms-grid;
     display: grid;
@@ -851,8 +1050,14 @@ a:hover {
     text-align: center;
   }
   /* AGENDA */
+  .agenda__calendario h2 {
+    font-size: 2rem;
+  }
   .agenda__calendario h2, .agenda__calendario p {
     text-align: center;
+  }
+  .agenda__calendario .agenda__calendario--monthText {
+    font-size: 2.5rem;
   }
   .container {
     max-width: 1000px;
@@ -885,6 +1090,7 @@ a:hover {
     padding: 0;
     position: relative;
     width: 14.28571%;
+    font-size: 2rem;
   }
   .grid-calendar .grid-cell.previous-month {
     color: #a6a6a6;
@@ -896,22 +1102,37 @@ a:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
     width: 100%;
   }
   .grid-calendar .grid-cell > div > div {
     height: 0;
     padding: 50% 0;
   }
+  .grid-calendar .grid-cell > div span {
+    padding-right: 1rem;
+  }
   .agenda__calendario--marker {
     font-weight: 700;
+    font-size: 2rem;
     background-color: #7b7676f0;
+  }
+  .agenda__fechaSelect {
+    border: black solid 4px;
+    border-radius: 40px;
+    margin-inline: 5rem;
   }
   .agenda__fechaSelect h3 {
     text-align: center;
     padding-bottom: 1rem;
+  }
+  .agenda__fechaSelect--cardEvento {
+    padding-block: 1rem;
+  }
+  .agenda__fechaSelect--infoBold {
+    font-weight: 600;
   }
   .agenda__fechaSelect--imgEvento {
     display: -webkit-box;
@@ -920,10 +1141,39 @@ a:hover {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: end;
-    padding-right: 4rem;
   }
   .agenda__fechaSelect--imgEvento img {
     width: 6rem;
+  }
+  /* CONTACTO */
+  .contacto__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .btn {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    background-color: #161317;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    color: black;
+  }
+  .btn:hover {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+    -webkit-transition: all 500ms;
+    transition: all 500ms;
+    background-color: #161317;
+    color: black;
+  }
+  .contacto__redesMob {
+    display: none;
   }
   /* FOOTER */
   #animacionLp {

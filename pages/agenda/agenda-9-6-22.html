@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website |Agenda - 9 de Junio 2022</title>
+    <title>Modulador zine |Agenda - 9 de Junio 2022</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../../sass/style.css">
     <meta name="description" content="Enterate de los ultimos eventos en Argentina para los proximos dias.">
@@ -24,7 +24,7 @@
 
             <div class="header__desktop--contCentral">
                 <div class="header__desktop--logo">
-                    <h1><a href="../../index.html">website</a></h1>
+                    <h1><a href="../../index.html">modulador</a></h1>
                 </div>
                 <nav class="header__desktop--menu">    
                         <ul>
@@ -54,9 +54,11 @@
     <main>
         <div class="container agenda__calendario">
             
-            <h2>AGENDA</h2>
-
-            <p>JUNIO 2022</p>
+            <h2>Agenda de eventos en Argentina</h2>
+            <hr>
+            <p>Enterate de ferias, fiestas, recitales y mas seleccionando una fecha:</p> 
+                
+            <p class="agenda__calendario--monthText">JUNIO 2022</p>
 
             <div class="grid-calendar">
                 <div class="row calendar-week-header">
@@ -122,18 +124,29 @@
         </div>
 
         <div class="agenda__fechaSelect">
-            <h3>9 de Junio, 2022</h3>
+            <h3>Jueves, 9 de Junio, 2022</h3>
 
-            <div class="agenda__fechaSelect--cardEvento">
+            <div class="agenda__fechaSelect--evento">
                 <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-6 agenda__fechaSelect--imgEvento">
+                    <div class="row agenda__fechaSelect--cardEvento">
+                        <div class="col-md-4 agenda__fechaSelect--imgEvento">
                             <img src="../../img/generic.jpg" />
                         </div>
-                        <div class="col-md-6 agenda__fechaSelect--infoEvento">
-                            <p>Los Blablabla en El Palacio de la Milanesa, Rivadavia 1234, 23hs.</p>
+                        <div class="col-md-8 agenda__fechaSelect--infoEvento">
+                            <p class="agenda__fechaSelect--infoBold">Los Blablabla en El Palacio de la Milanesa</p> 
+                            <p>Rivadavia 1234, 23hs.</p>
                         </div>
                     </div>
+                    <div class="row agenda__fechaSelect--cardEvento">
+                        <div class="col-md-4 agenda__fechaSelect--imgEvento">
+                            <img src="../../img/molinac.jpg" />
+                        </div>
+                        <div class="col-md-8 agenda__fechaSelect--infoEvento">
+                            <p class="agenda__fechaSelect--infoBold">11vo. encuentro internacional de parkour gaucho en Niceto Club</p> 
+                            <p>Niceto Vega 1234, 02:30hs.</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -143,7 +156,7 @@
         <div id="footer" class="row d-none d-sm-block d-sm-none d-md-block d-md-none d-lg-flex">
             <div class="col-5 d-flex align-items-center justify-content-end pb-5">
                 <div class="text-end">
-                    <p class="fw-semibold">Website</p>
+                    <p class="fw-semibold">Modulador</p>
                     <p class="fw-semibold">2022</p>
                 </div>        
             </div>
